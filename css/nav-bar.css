@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color: orange;
+}
+header nav ul{
+    display: flex;
+}
+header nav ul li{
+    padding: 3vh 8vh;
+    list-style-type: none;
+}
+header nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+header nav ul:hover{
+    transition-duration: 0.5s;
+    color: rgb(81, 81, 81);
+    font-weight: 700;
+    font-size: 40px;
+}
+header nav ul li a:hover{
+    transition-duration: 0.5s;
+    color: rgb(81, 81, 81);
+    font-weight: 700;
+    font-size: 40px;
+}
+body{
+    background-color: rgb(255, 233, 192);
+}
