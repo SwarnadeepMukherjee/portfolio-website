@@ -7,10 +7,12 @@
     <title>Portfolio</title>
 
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&display=swap');
+
         .pfp{
             display: flex;
             justify-content: center;
-            margin: 150px;
+            margin: 100px;
 
         }
         .pfp img{
@@ -23,31 +25,67 @@
             flex-direction: column;
             justify-content: center;
             margin-left: 50px;
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: 700;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 500;
             font-size: 20px;
         }
         .pfp-text h1{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 500;
+            font-size: 40px;
             margin-bottom: 20px;
+        }
+        .pfp-text p{
+            color: rgb(65, 65, 65);
+        }
+        body h2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "Bitcount Grid Double", system-ui;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: normal;
+            font-variation-settings: "slnt" 0, "CRSV" 0.5, "ELSH" 0, "ELXP" 0;
+            font-size: 80px;
+            padding: 50px;
+        }
+        .skills{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 50px;
+        }
+        .skills img{
+            width: 250px;
+            height: 250px;
+            border-radius: 100%;
+        }
+        .skills p{
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 75px;
+            padding: 30px;
+            font-weight: 600;
         }
     </style>
 
 </head>
 
-    <header>
-        <nav>
-            <ul>
-                <li><a href="/portfolio-website/home">Home</a></li>
-                <li><a href="/portfolio-website/projects">Projects</a></li>
-                <li><a href="/portfolio-website/contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <nav>
+        <ul>
+            <li><a href="https://swarnadeepmukherjee.github.io/portfolio-website/"><img src="/portfolio-website/img/logo.png" alt="logo"></a></li>
+            <li><a href="/portfolio-website/index.html">Home</a></li>
+            <li><a href="/portfolio-website/projects.html">Projects</a></li>
+            <li><a href="/portfolio-website/contact.html">Contact Me</a></li>
+        </ul>
+    </nav>
+</header>
 
 <body>
 
     <div class="pfp">
-        <img src="https://images.prismic.io/smi-blog/6c987520-81a6-4d03-acc3-2281bbb8b323_IMG_4795.jpg?auto=compress,format" alt="pfp">
+        <img src="/portfolio-website/img/logo.png" alt="pfp">
         <div class="pfp-text">
             <h1>Swarnadeep Mukherjee</h1>
             <p>Class - 11</p>
@@ -55,6 +93,26 @@
         </div>
     </div>
     <hr>
-    <div class="int"></div>
+    <h2>What I Know ??</h2>
+    <div class="skills">
+        <img src="https://www.cnet.com/a/img/resize/6019f01d3b92576edc0a52712a047db8cb78331d/hub/2014/10/27/40194e6e-2544-419e-a340-f7c17b2e83c5/html5-wow-image-w3c.jpg?auto=webp&fit=crop&height=900&width=1200" alt="html-img">
+        <p>HTML</p>
+    </div>
+    <div class="skills">
+        <p>CSS</p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSubsfvX1GCHF8amyfEQxTz7AECFDY-oGMVTg&s" alt="css-img">
+    </div>
+    <div class="skills">
+        <img src="https://spaces-cdn.clipsafari.com/zfdcbo72px0of6jlw2zxfpzys1l8" alt="python-img">
+        <p>PYTHON</p>
+    </div>
+    <div class="skills">
+        <p>C++</p>
+        <img src="https://cloud.google.com/static/cpp/images/cpp-logo.png" alt="c++-img">
+    </div>
+    <div class="skills">
+        <img src="https://www.macworld.com/wp-content/uploads/2023/01/learn_java_on_mac.jpg?quality=50&strip=all" alt="java-img">
+        <p>JAVA</p>
+    </div>
 </body>
 </html>

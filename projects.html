@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/portfolio-website/css/nav-bar.css">
+    <title>Projects</title>
+</head>
+
+<style>
+    .projects{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 50px;
+    }
+    .projects-text{
+        flex-direction: column;
+    }
+    .landscape{
+        width: 500px;
+        height: 250px;
+        border-radius: 25px;
+    }
+    .portrait{
+        width: 350px;
+        height: 500px;
+        border-radius: 25px;
+    }
+    .projects h3{
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 40px;
+        padding: 30px;
+        font-weight: 600;
+    }
+    .projects p{
+        font-family: 'Tahoma', Courier, monospace;
+        font-size: 25px;
+        padding: 30px;
+        font-weight: 500;
+    }
+</style>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="https://swarnadeepmukherjee.github.io/portfolio-website/"><img src="/portfolio-website/img/logo.png" alt="logo"></a></li>
+            <li><a href="/portfolio-website/index.html">Home</a></li>
+            <li><a href="/portfolio-website/projects.html">Projects</a></li>
+            <li><a href="/portfolio-website/contact.html">Contact Me</a></li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+    <div class="projects">
+        <img class="landscape" src="/portfolio-website/img/biocharge-solutions.jpg" alt="biocharge-solutions-img">
+        <div class="projects-text">
+            <h3>BioCharge Solutions (National Level Science Model Making Competition) Class-9</h3>
+            <p>Generating Electricity from Soil</p>
+        </div>
+    </div>
+    <hr>
+    <div class="projects">
+        <div class="projects-text">
+            <h3>Inter House Science Model Making Competition Class-10</h3>
+            <p>Home Automation Project</p>
+        </div>
+        <img class="portrait" src="/portfolio-website/img/class-9-science-model-making-competition.jpg" alt="class-9-science-model-making-competition-img">
+    </div>
+    <hr>
+</body>
+</html>
