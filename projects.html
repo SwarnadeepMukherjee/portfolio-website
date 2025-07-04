@@ -1,73 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/portfolio-website/css/nav-bar.css">
-    <title>Projects</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/portfolio-website/css/nav-bar.css" />
+  <title>Projects</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #ffffff;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .projects {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 50px;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .projects-text {
+      max-width: 600px;
+      flex-direction: column;
+    }
+
+    .landscape {
+      width: 500px;
+      height: 250px;
+      border-radius: 25px;
+    }
+
+    .portrait {
+      width: 350px;
+      height: 500px;
+      border-radius: 25px;
+    }
+
+    .projects h3 {
+      font-size: 28px;
+      padding: 10px 0;
+      font-weight: 600;
+    }
+
+    .projects p {
+      font-size: 20px;
+      font-weight: 400;
+      color: #555;
+    }
+
+    hr {
+      border: none;
+      border-top: 2px solid #ccc;
+      margin: 30px 80px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: linear-gradient(black, rgba(255, 255, 255, 0));
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 0;
+      margin: 0;
+    }
+
+    nav li {
+      padding: 1vh 5vh;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 16px;
+      color: #4d2db7;
+    }
+
+    nav img {
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+    }
+
+    #dark-mode {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    body.dark-mode {
+      background-color: #09052d;
+      color: white;
+    }
+
+    body.dark-mode nav a {
+      color: #ccc;
+    }
+
+    body.dark-mode .projects p {
+      color: #ccc;
+    }
+
+    body.dark-mode hr {
+      border-color: #444;
+    }
+
+    /* 📱 Responsive */
+    @media (max-width: 768px) {
+      .projects {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .landscape,
+      .portrait {
+        width: 90%;
+        height: auto;
+      }
+
+      .projects-text {
+        text-align: center;
+        padding: 0 20px;
+      }
+    }
+  </style>
 </head>
 
-<style>
-    .projects{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 50px;
-    }
-    .projects-text{
-        flex-direction: column;
-    }
-    .landscape{
-        width: 500px;
-        height: 250px;
-        border-radius: 25px;
-    }
-    .portrait{
-        width: 350px;
-        height: 500px;
-        border-radius: 25px;
-    }
-    .projects h3{
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 40px;
-        padding: 30px;
-        font-weight: 600;
-    }
-    .projects p{
-        font-family: 'Tahoma', Courier, monospace;
-        font-size: 25px;
-        padding: 30px;
-        font-weight: 500;
-    }
-</style>
-
-<header>
-    <nav>
-        <ul>
-            <li><a href="https://swarnadeepmukherjee.github.io/portfolio-website/"><img src="/portfolio-website/img/logo.png" alt="logo"></a></li>
-            <li><a href="/portfolio-website/index.html">Home</a></li>
-            <li><a href="/portfolio-website/projects.html">Projects</a></li>
-            <li><a href="/portfolio-website/contact.html">Contact Me</a></li>
-        </ul>
-    </nav>
-</header>
-
 <body>
-    <div class="projects">
-        <img class="landscape" src="/portfolio-website/img/biocharge-solutions.jpg" alt="biocharge-solutions-img">
-        <div class="projects-text">
-            <h3>BioCharge Solutions (National Level Science Model Making Competition) Class-9</h3>
-            <p>Generating Electricity from Soil</p>
-        </div>
+  <header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://swarnadeepmukherjee.github.io/portfolio-website/">
+            <img src="/portfolio-website/img/logo.png" alt="logo" />
+          </a>
+        </li>
+        <li><a href="/portfolio-website/index.html">Home</a></li>
+        <li><a href="/portfolio-website/projects.html">Projects</a></li>
+        <li><a href="/portfolio-website/contact.html">Contact Me</a></li>
+        <li>
+          <button id="dark-mode">
+            <img src="https://media.istockphoto.com/id/2024102248/vector/day-night-mode-switch-ui-button-light-dark-mode-slider-theme.jpg?s=612x612&w=0&k=20&c=pfoFkXbraLjEXiMPPvxgqsqv1BnBI58JsLHdDIVL6aA=" alt="dark-mode icon" />
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="projects">
+    <img class="landscape" src="/portfolio-website/img/biocharge-solutions.jpg" alt="biocharge-solutions-img" />
+    <div class="projects-text">
+      <h3>BioCharge Solutions (National Level Science Model Making Competition) Class-9</h3>
+      <p>Generating Electricity from Soil</p>
     </div>
-    <hr>
-    <div class="projects">
-        <div class="projects-text">
-            <h3>Inter House Science Model Making Competition Class-10</h3>
-            <p>Home Automation Project</p>
-        </div>
-        <img class="portrait" src="/portfolio-website/img/class-9-science-model-making-competition.jpg" alt="class-9-science-model-making-competition-img">
+  </div>
+
+  <hr />
+
+  <div class="projects">
+    <div class="projects-text">
+      <h3>Inter House Science Model Making Competition Class-10</h3>
+      <p>Home Automation Project</p>
     </div>
-    <hr>
+    <img class="portrait" src="/portfolio-website/img/class-9-science-model-making-competition.jpg" alt="class-9-science-model-making-competition-img" />
+  </div>
+
+  <hr />
+
+  <script>
+    const button = document.getElementById("dark-mode");
+    button.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+    });
+  </script>
 </body>
 </html>

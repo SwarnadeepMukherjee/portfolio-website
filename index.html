@@ -38,6 +38,23 @@
         .pfp-text p{
             color: rgb(65, 65, 65);
         }
+        body {
+      font-family: 'Poppins', sans-serif;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      background: rgb(245, 245, 247);
+      color: #333;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 10%;
+    }
+    .logo {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #4d2db7;
+    }
         body h2{
             display: flex;
             justify-content: center;
@@ -49,6 +66,9 @@
             font-variation-settings: "slnt" 0, "CRSV" 0.5, "ELSH" 0, "ELXP" 0;
             font-size: 80px;
             padding: 50px;
+        }
+        body.dark-mode h2{
+            color: rgb(208, 208, 208);
         }
         .skills{
             display: flex;
@@ -67,6 +87,73 @@
             padding: 30px;
             font-weight: 600;
         }
+        .cta-button {
+            background-color: #8e2de2;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            }
+        .hero {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 60px 10%;
+        }
+        .hero-text h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+        }
+        .hero-text h4 {
+        font-size: 10rem;
+        font-weight: 700;
+        color: #8e2de2;
+        margin-bottom: 15px;
+        }
+        .hero-text p {
+        margin-bottom: 20px;
+        color: #555;
+        }
+        .buttons {
+        display: flex;
+        gap: 15px;
+        }
+        .buttons a {
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: 2px solid #8e2de2;
+        font-weight: 500;
+        }
+        .primary-btn {
+        background-color: #8e2de2;
+        color: #fff;
+        }
+        .secondary-btn {
+        color: #8e2de2;
+        background-color: #fff;
+        }
+        .hero-image img {
+        width: 300px;
+        border-radius: 12px;
+        }
+        body.dark-mode{
+            transition: background-color 0.3s ease, color 0.3s ease;
+            background-color: #09052d;
+        }
+        body.dark-mode .hero-text p{
+            color: white;
+        }
+        @media (max-width: 768px) {
+        .hero {
+            flex-direction: column;
+            text-align: center;
+        }
+        .hero-text, .hero-image {
+            max-width: 100%;
+        }
+    }
     </style>
 
 </head>
@@ -78,20 +165,27 @@
             <li><a href="/portfolio-website/index.html">Home</a></li>
             <li><a href="/portfolio-website/projects.html">Projects</a></li>
             <li><a href="/portfolio-website/contact.html">Contact Me</a></li>
+            <li><button id="dark-mode"><img src="https://media.istockphoto.com/id/2024102248/vector/day-night-mode-switch-ui-button-light-dark-mode-slider-theme.jpg?s=612x612&w=0&k=20&c=pfoFkXbraLjEXiMPPvxgqsqv1BnBI58JsLHdDIVL6aA=" alt="dark-mode"></button></li>
         </ul>
     </nav>
 </header>
 
 <body>
 
-    <div class="pfp">
-        <img src="/portfolio-website/img/logo.png" alt="pfp">
-        <div class="pfp-text">
-            <h1>Swarnadeep Mukherjee</h1>
-            <p>Class - 11</p>
-            <p>Sec - N</p>
-        </div>
+    <section class="hero">
+    <div class="hero-text">
+      <h1>Hi, I'm Swarnadeep!</h1>
+      <h4>WEB DESIGNER</h4>
+      <p>A creative and curious student focused on building clean, aesthetic websites with purpose and logic. Currently designing a 75-day fitness site and a personal portfolio to showcase my skills.</p>
+      <div class="buttons">
+        <a href="/portfolio-website/projects.html" class="primary-btn">Projects</a>
+      </div>
     </div>
+    <div class="hero-image">
+      <img src="/portfolio-website/img/dp.png" alt="Profile Image" />
+    </div>
+  </section>
+
     <hr>
     <h2>What I Know ??</h2>
     <div class="skills">
@@ -115,4 +209,12 @@
         <p>JAVA</p>
     </div>
 </body>
+
+<script>
+    const button = document.getElementById("dark-mode")
+    button.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode")
+    })
+</script>
+
 </html>
